@@ -1,10 +1,10 @@
 import React, { useState,useCallback } from 'react';
-import { useNavigate } from 'react-router-dom'
+
 import styled from 'styled-components';
-import { signup } from '../api/signup';
+import { signup } from '../../api/signup';
 const SignUpComponent = (props) => {
 
-    const navigate = useNavigate();
+
     const [email, setEmail] = useState('')
     const [emailMessage, setEmailMessage] = useState('')
     const [isEmail, setIsEmail] = useState(false)
@@ -68,10 +68,10 @@ const SignUpComponent = (props) => {
             {password.length > 0 && (<span style={{color:`${passwordColor}`}}>{passwordMessage}</span>)}
             <ButtonWrap>
                 {
-                    isEmail&&isPassword? <SuccessButton onClick={onClickSignUp}>회원가입</SuccessButton>: <FailButton onClick={()=>navigate("/todo")}>회원가입</FailButton>
+                    isEmail&&isPassword? <SuccessButton onClick={onClickSignUp}>회원가입</SuccessButton>: <FailButton >회원가입</FailButton>
                 }            
              
-              <div onClick={()=>props.setLoginOrSignUp(false)}>취소</div>
+              <div style={{border:"1px solid", width:"50%",cursor:"pointer"}}onClick={()=>props.setLoginOrSignUp(true)}>취소</div>
             </ButtonWrap>
 
         </div>
@@ -83,10 +83,14 @@ display:flex;
 justify-content:space-between;
 `
 const SuccessButton = styled.div`
+width:50%;
 background-color:orange;
-cursor:pointer
+cursor:pointer;
+border:1px solid;
 `
 const FailButton = styled.div`
+width:50%;
+border: 1px solid;
 
 `
 

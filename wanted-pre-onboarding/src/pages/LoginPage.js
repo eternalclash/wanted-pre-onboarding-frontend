@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { useNavigate, UseNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
-import LoginComponent from '../components/LoginComponent';
-import SignUpComponent from '../components/SignUpComponent';
+import LoginComponent from '../components/auth/LoginComponent';
+import SignUpComponent from '../components/auth/SignUpComponent';
 
 const LoginPage = () => {
     const navigate =useNavigate()

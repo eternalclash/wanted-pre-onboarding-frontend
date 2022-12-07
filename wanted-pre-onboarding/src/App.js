@@ -1,6 +1,6 @@
 import LoginPage from "./pages/LoginPage";
 import TodoListPage from "./pages/TodoListPage";
-import { redirect, Route,Routes} from "react-router-dom";
+import {  Route,Routes} from "react-router-dom";
 import styled from "styled-components";
 
 
