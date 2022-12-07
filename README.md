@@ -36,6 +36,7 @@
 ---
 
 ### :: 2. 투두 리스트
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/77526745/206173690-1dac6e2e-b5a8-424d-bc76-2557d154474d.gif)
 
 #### Assignment4
 
