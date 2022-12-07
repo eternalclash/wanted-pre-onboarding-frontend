@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginPage from "./pages/LoginPage";
+import TodoListPage from "./pages/TodoListPage";
+import { redirect, Route,Routes} from "react-router-dom";
+import styled from "styled-components";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+     
+    <Routes>
+        <Route exact path="/"  element={<LoginPage/>} />
+        <Route exact path="/todo" element={<TodoListPage/>} />
+    </Routes>     
+   
+   
+   </Main>
   );
 }
 
+const Main = styled.div`
+  display:flex;
+  min-height:100vh;
+  justify-content:center;
+  align-items:center;
+
+`
 export default App;
